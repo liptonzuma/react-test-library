@@ -1,7 +1,7 @@
 import { render, screen,fireEvent } from '@testing-library/react';
 import Input from '../../input/Input'
 
-    test('renders placeholder text', () => {
+    test('renders placeholder text', async () => {
         render(<Input  />);
         const inputElement = screen.getByPlaceholderText(/enter text/i);
         const buttonElement = screen.getByRole("button");
