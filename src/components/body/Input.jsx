@@ -17,10 +17,6 @@ function Input() {
 
     // end of handling button press
 
-    useEffect(()=>{
-        console.log(todos)
-
-    },[todos])
 
   return (
     <div >
@@ -47,7 +43,7 @@ function Input() {
         >save</button>
         </form>
         
-        <Todos todos={todos} />
+        <Todos todos={todos} setTodos={setTodos} />
     </div>
   )
 }

@@ -1,15 +1,24 @@
-import React from 'react'
+import React from "react";
 
-function Todos({todos}) {
-  return (
-    <div style={{
-    }}>
-        {/* display todos */}
-       <ul>
-       {todos.length && todos.map(todo=><li key={todo}>{todo}</li>)}
-        </ul> 
-    </div>
-  )
+function Todos({ todos,setTodos }) {
+    
+    function remove(todo){
+        setTodos(todos.filter(e=>e !== todo))
+    }
+
+    
+
+    return (
+        <div style={{}}>
+            {/* display todos */}
+            <ul>
+                {todos.length && todos.map((todo) =>
+             <li onDoubleClick={()=>remove(todo)} 
+             key={todo}>{todo}
+             </li>)
+             }</ul>
+        </div>
+    );
 }
 
-export default Todos
+export default Todos;
