@@ -4,7 +4,7 @@ import Header from "./components/header/Header";
 function App() {
   return (
     <div className="App">
-      <Header header={"Welcome to testing"} />
+      <Header header={"Welcome to my testing todo app"} />
       <Input />
     </div>
   );
