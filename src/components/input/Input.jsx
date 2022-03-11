@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Todos from './Todos';
+import Todos from '../todo/Todos';
 
 function Input() {
 
@@ -10,7 +10,7 @@ function Input() {
     // handle button press
     function handleButtonPress(e){
         e.preventDefault()
-        setTodos(todos.concat(input))
+        input.length?  setTodos(todos.concat(input)) : alert("Please enter something")
         setInput("")
 
     }

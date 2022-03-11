@@ -1,4 +1,4 @@
-import Input from "./components/body/Input";
+import Input from "./components/input/Input";
 import Header from "./components/header/Header";
 
 function App() {

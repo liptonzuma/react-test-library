@@ -13,7 +13,9 @@ function Todos({ todos,setTodos }) {
             {/* display todos */}
             <ul>
                 {todos.length && todos.map((todo) =>
-             <li onDoubleClick={()=>remove(todo)} 
+             <li 
+             style={{cursor:"pointer"}}
+             onDoubleClick={()=>remove(todo)} 
              key={todo}>{todo}
              </li>)
              }</ul>
