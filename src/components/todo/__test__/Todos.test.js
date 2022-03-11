@@ -1,8 +1,14 @@
 import { render, screen,fireEvent } from '@testing-library/react';
-import Todos from '../Todos'
+import Input from '../../input/Input'
 
     test('renders placeholder text', () => {
-        // render(<Todos />);
-        // const inputElement = screen.getByPlaceholderText(/enter text/i)
-        // expect(inputElement).toBeInTheDocument();
+        render(<Input  />);
+        const inputElement = screen.getByPlaceholderText(/enter text/i);
+        const buttonElement = screen.getByRole("button");
+        const listItemsElement = screen.getByRole("list")
+
+        fireEvent.change(inputElement,{target:{value:/take a nap/i}})
+        fireEvent.click(buttonElement)
+
+        expect(listItemsElement).toBeInTheDocument()
     })
